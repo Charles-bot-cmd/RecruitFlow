@@ -26,12 +26,3 @@ jobs:
         run: npm run migrate
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-
-      - name: Add migrate.ts to repository
-        run: git add migrate.ts
-
-      - name: Commit migrate.ts to repository
-        run: git commit -m "chore: add migrate.ts to repo root"
-
-      - name: Push migrate.ts to repository
-        run: git push origin main 
